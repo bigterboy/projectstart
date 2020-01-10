@@ -10,10 +10,12 @@ import {
 } from 'react-native';
 
 import {
-  createStackNavigator,
+  //createStackNavigator,
   createAppContainer,
   //createBottomTabNavigator,
 } from 'react-navigation';
+
+import {createStackNavigator} from 'react-navigation-stack';
 
 import {createBottomTabNavigator} from 'react-navigation-tabs';
 
@@ -21,24 +23,26 @@ import MainHomeTab from './tab/MainHomeTab';
 import MainLoanTab from './tab/MainLoanTab';
 import MainCardTab from './tab/MainCardTab';
 
+import Test from './Test';
+
 const BottomMainNavigator = createBottomTabNavigator(
   {
     MainHomeTab: {
       screen: MainHomeTab,
       navigationOptions: {
-        title: 'ABC',
+        title: 'TAB 1',
       },
     },
     MainLoanTab: {
       screen: MainLoanTab,
       navigationOptions: {
-        title: 'CDF',
+        title: 'TAB 2',
       },
     },
     MainCardTab: {
       screen: MainCardTab,
       navigationOptions: {
-        title: 'GHK',
+        title: 'TAB 3',
       },
     },
   },
@@ -76,13 +80,9 @@ const BottomMainNavigator = createBottomTabNavigator(
         }
         return (
           <Image
-            source={icon}
+            //source={icon}  // khi nao can hinh thi mo len
             resizeMode="contain"
-            style={{
-              width: 24,
-              height: 24,
-              marginTop: 8,
-            }}
+            style={styles.styleIcon}
           />
         );
       },
@@ -90,4 +90,28 @@ const BottomMainNavigator = createBottomTabNavigator(
   },
 );
 
-export default createAppContainer(BottomMainNavigator);
+const SwitchStack = createStackNavigator(
+  {
+    MainBottomTabStack: BottomMainNavigator,
+    TestStack: Test,
+  },
+  {
+    headerMode: 'none',
+    defaultNavigationOptions: {
+      gesturesEnabled: false,
+    },
+    //initialRouteName: 'TestStack',
+  },
+);
+
+const styles = StyleSheet.create({
+  styleIcon: {
+    width: 24,
+    height: 24,
+    marginTop: 8,
+  },
+});
+
+export default createAppContainer(SwitchStack);
+
+//export default createAppContainer(BottomMainNavigator);

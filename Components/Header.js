@@ -7,15 +7,15 @@
  */
 
 import React, {Component} from 'react';
-import {StatusBar, SafeAreaView} from 'react-native';
+import {StatusBar, SafeAreaView, View} from 'react-native';
 
 export default class Header extends Component {
   render() {
     return (
-      <>
+      <View style={{flex: 1, borderWidth: 1}}>
         <StatusBar barStyle="dark-content" />
-        <SafeAreaView />
-      </>
+        <SafeAreaView>{this.props.children}</SafeAreaView>
+      </View>
     );
   }
 }

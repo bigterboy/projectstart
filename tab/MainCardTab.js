@@ -10,7 +10,7 @@ import React, {Component} from 'react';
 import {
   Text,
   StatusBar,
-  SafeAreaView,
+  //SafeAreaView,
   ScrollView,
   View,
   StyleSheet,
@@ -21,15 +21,14 @@ import {
 
 import Header from '../Components/Header';
 
+import SafeAreaView from 'react-native-safe-area-view';
+
 export default class MainCardTab extends Component {
   render() {
     return (
-      <>
-        <Header />
-        <ScrollView>
-          <Text>TAB 3</Text>
-        </ScrollView>
-      </>
+      <SafeAreaView>
+        <Text>TAB 3</Text>
+      </SafeAreaView>
     );
   }
 }

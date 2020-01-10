@@ -7,20 +7,16 @@
  */
 
 import React, {Component} from 'react';
-import {Text, ScrollView, Button} from 'react-native';
+import {Text, ScrollView, SafeAreaView, View} from 'react-native';
 
 import Header from '../Components/Header';
 
 export default class MainHomeTab extends Component {
-
   render() {
     return (
-      <>
-        <Header />
-        <ScrollView>
-          <Text>TAB 1</Text>
-        </ScrollView>
-      </>
+      <SafeAreaView>
+        <Text>TAB 1</Text>
+      </SafeAreaView>
     );
   }
 }
