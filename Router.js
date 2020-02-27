@@ -23,6 +23,8 @@ import MainHomeTab from './tab/MainHomeTab';
 import MainLoanTab from './tab/MainLoanTab';
 import MainCardTab from './tab/MainCardTab';
 
+import Notification from './Components/Notification';
+
 import Test from './Test';
 
 const BottomMainNavigator = createBottomTabNavigator(
@@ -90,17 +92,31 @@ const BottomMainNavigator = createBottomTabNavigator(
   },
 );
 
+const MainStack = createStackNavigator(
+  {
+    MainBottomTab: BottomMainNavigator,
+    Notification: Notification,
+  },
+  {
+    // headerMode: 'none',
+    // defaultNavigationOptions: {
+    //   gesturesEnabled: false,
+    // },
+    //initialRouteName: "MainBottomTab"
+  },
+);
+
 const SwitchStack = createStackNavigator(
   {
-    MainBottomTabStack: BottomMainNavigator,
-    TestStack: Test,
+    MainFlow: MainStack,
+    AuthFlow: Test,
   },
   {
     headerMode: 'none',
     defaultNavigationOptions: {
       gesturesEnabled: false,
     },
-    //initialRouteName: 'TestStack',
+    initialRouteName: 'MainFlow',
   },
 );
 
