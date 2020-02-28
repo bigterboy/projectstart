@@ -7,6 +7,7 @@ import {
   ActivityIndicator,
   StatusBar,
   Image,
+  Button,
 } from 'react-native';
 
 import {
@@ -23,9 +24,8 @@ import MainHomeTab from './tab/MainHomeTab';
 import MainLoanTab from './tab/MainLoanTab';
 import MainCardTab from './tab/MainCardTab';
 
-import Notification from './Components/Notification';
-
-import Test from './Test';
+import Loading from './modals/Loading';
+import Modal2 from './modals/Modal2';
 
 const BottomMainNavigator = createBottomTabNavigator(
   {
@@ -92,31 +92,43 @@ const BottomMainNavigator = createBottomTabNavigator(
   },
 );
 
-const MainStack = createStackNavigator(
+const RootStack = createStackNavigator(
   {
-    MainBottomTab: BottomMainNavigator,
-    Notification: Notification,
+    MainStack: {
+      screen: BottomMainNavigator,
+    },
   },
   {
-    // headerMode: 'none',
-    // defaultNavigationOptions: {
-    //   gesturesEnabled: false,
-    // },
-    //initialRouteName: "MainBottomTab"
+    initialRouteName: 'MainStack',
+    headerMode: 'none',
   },
 );
 
 const SwitchStack = createStackNavigator(
   {
-    MainFlow: MainStack,
-    AuthFlow: Test,
+    MainFlow: RootStack,
+    ModalLoading: {
+      screen: !1 ? Loading : Modal2, // sử lý cái này để check xem thử có login hay chưa
+    },
   },
   {
+    mode: 'modal',
     headerMode: 'none',
     defaultNavigationOptions: {
       gesturesEnabled: false,
     },
-    initialRouteName: 'MainFlow',
+    cardStyle: {
+      backgroundColor: 'rgba(0, 0, 0, 0.2)',
+      opacity: 1,
+    },
+    transitionConfig: () => ({
+      containerStyle: {
+        backgroundColor: 'rgba(0, 0,0, 0.2)',
+      },
+      transitionSpec: {
+        duration: 0,
+      },
+    }),
   },
 );
 
@@ -129,5 +141,3 @@ const styles = StyleSheet.create({
 });
 
 export default createAppContainer(SwitchStack);
-
-//export default createAppContainer(BottomMainNavigator);

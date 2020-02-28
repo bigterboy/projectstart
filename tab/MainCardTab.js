@@ -26,9 +26,9 @@ import SafeAreaView from 'react-native-safe-area-view';
 export default class MainCardTab extends Component {
   render() {
     return (
-      <SafeAreaView>
         <Text>TAB 3</Text>
-      </SafeAreaView>
+      // <SafeAreaView>
+      // </SafeAreaView>
     );
   }
 }
