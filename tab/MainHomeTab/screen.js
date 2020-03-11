@@ -14,14 +14,18 @@ import {
   View,
   Button,
   TouchableOpacity,
+  Animated,
+  TextInput,
 } from 'react-native';
 
-import Header from '../Components/Header';
+import {Input, Test} from 'component';
 
 export default class MainHomeTab extends Component {
-  static navigationOptions = ({navigation}) => {
-    //const params = navigation.state.params || {};
+  constructor(props) {
+    super(props);
+  }
 
+  static navigationOptions = ({navigation}) => {
     return {
       headerLeft: () => (
         <Button
@@ -30,34 +34,31 @@ export default class MainHomeTab extends Component {
           color="#fff"
         />
       ),
-      /* the rest of this config is unchanged */
     };
   };
 
-  // static navigationOptions = ({navigation}) => {
-  //   const params = navigation.state.params || {};
-
-  //   return {
-  //     headerTitle: () => <Text>ABCC</Text>,
-  //     headerLeft: () => (
-  //       <Button onPress={() => navigation.navigate('MyModal')} title="Info" />
-  //     ),
-  //     //headerRight: () => <Button onPress={params.increaseCount} title="+1" />,
-  //   };
-  // };
   render() {
+    console.log('render lai MAIN HOME TAB KHONG', this.props);
     return (
       <View style={{flex: 1, justifyContent: 'center', alignItems: 'center'}}>
         <Text>TAB 1</Text>
+
         <TouchableOpacity
           onPress={() => {
-            this.props.navigation.navigate('ModalLoading');
+            //this.props.navigation.navigate('ModalLoading');
+            this.props.handleIncrease();
           }}>
-          <Text>CLICK</Text>
+          <Text>CLICK +</Text>
         </TouchableOpacity>
+        <TouchableOpacity
+          onPress={() => {
+            //this.props.navigation.navigate('ModalLoading');
+            this.props.handleDecrease();
+          }}>
+          <Text>CLICK -</Text>
+        </TouchableOpacity>
+        <Text>{this.props.counter}</Text>
       </View>
-      // <SafeAreaView>
-      // </SafeAreaView>
     );
   }
 }

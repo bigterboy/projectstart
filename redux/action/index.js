@@ -1,6 +1,3 @@
-const actions = {
-  INCREASE: 'INCREASE',
-  DECREASE: 'DECREASE',
-};
+import * as count from './count';
 
-export default actions;
+export default {count};

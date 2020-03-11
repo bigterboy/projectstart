@@ -12,7 +12,7 @@ import Header from '../Components/Header';
 export default class MainLoanTab extends Component {
   render() {
     return (
-        <Text>TAB 2</Text>
+      <Text>TAB 2</Text>
       // <SafeAreaView>
       // </SafeAreaView>
     );

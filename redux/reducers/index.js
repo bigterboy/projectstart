@@ -1,14 +1,8 @@
-const initialState = 0;
+import {combineReducers} from 'redux';
+import counterReducer from './counterReducer';
+import loginReducer from './loginReducer';
 
-export default function(state = initialState, action) {
-  switch (action.type) {
-    case 'INCREASE':
-      return state + 1;
-
-    case 'DECREASE':
-      return state - 1;
-
-    default:
-      return state;
-  }
-}
+export default combineReducers({
+  counterReducer: counterReducer,
+  loginReducer: loginReducer,
+});

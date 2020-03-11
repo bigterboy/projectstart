@@ -20,7 +20,8 @@ import {createStackNavigator} from 'react-navigation-stack';
 
 import {createBottomTabNavigator} from 'react-navigation-tabs';
 
-import MainHomeTab from './tab/MainHomeTab';
+//import MainHomeTab from './tab/Home/MainHomeTab';
+import MainHomeTab from './tab/MainHomeTab/index';
 import MainLoanTab from './tab/MainLoanTab';
 import MainCardTab from './tab/MainCardTab';
 
