@@ -19,6 +19,12 @@ import {
 } from 'react-native';
 
 import {Input, Test} from 'component';
+import {config} from 'react-native-firebase';
+
+import Network from 'network';
+import action from 'action';
+
+//const netRequest = new Network();
 
 export default class MainHomeTab extends Component {
   constructor(props) {
@@ -35,6 +41,16 @@ export default class MainHomeTab extends Component {
         />
       ),
     };
+  };
+
+  requestAPI = async () => {
+    // ngon roi
+    // const temp = await Network.request().then(response => {
+    //   console.log('DATA 222: ', response);
+    // });
+    // console.log('DATA RESPONSE LA11111: ', temp);
+
+    console.log('DATA RESPONS LA1111111', await this.props.getAPI());
   };
 
   render() {
@@ -56,6 +72,12 @@ export default class MainHomeTab extends Component {
             this.props.handleDecrease();
           }}>
           <Text>CLICK -</Text>
+        </TouchableOpacity>
+        <TouchableOpacity
+          onPress={() => {
+            this.requestAPI();
+          }}>
+          <Text>REQUEST API</Text>
         </TouchableOpacity>
         <Text>{this.props.counter}</Text>
       </View>
