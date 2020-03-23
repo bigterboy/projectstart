@@ -1,20 +1,28 @@
-/**
- * Sample React Native App
- * https://github.com/facebook/react-native
- *
- * @format
- * @flow
- */
-
 import React, {Component} from 'react';
-import {Text, View} from 'react-native';
+import {
+  Text,
+  View,
+  KeyboardAvoidingView,
+  TouchableWithoutFeedback,
+  Keyboard,
+  StyleSheet,
+} from 'react-native';
 
 export default class Test extends Component {
   render() {
     return (
-      <View>
-
-      </View>
+      <TouchableWithoutFeedback
+        style={styles.container}
+        onPress={Keyboard.dismiss}
+        //accessible={false}>
+        ><Text>ASDA</Text>
+      </TouchableWithoutFeedback>
     );
   }
 }
+
+const styles = StyleSheet.create({
+  container: {
+    flex: 1,
+  },
+});

@@ -20,7 +20,7 @@
 		B9448B132737C8E3D0B89700 /* libPods-ProjectStart-tvOS.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 47A6D2BC8CC88BB1CABC0DAE /* libPods-ProjectStart-tvOS.a */; };
 		BB7ABBD53C96D52C834B1FC1 /* libPods-ProjectStart.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 8C714446A85DD28E52E9DBB6 /* libPods-ProjectStart.a */; };
 		E77EC9F0C468B2940D878CAA /* libPods-ProjectStartTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 598A8F61CD5C2EF0AFCDFC2C /* libPods-ProjectStartTests.a */; };
-		FAC59759241A350800F2B0E4 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = FAC59758241A350800F2B0E4 /* GoogleService-Info.plist */; };
+		FA553CD8242856B400A833DD /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = FA553CD7242856B400A833DD /* GoogleService-Info.plist */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -68,7 +68,7 @@
 		DFF46314B413E26C80CB8E3D /* Pods-ProjectStart.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ProjectStart.release.xcconfig"; path = "Target Support Files/Pods-ProjectStart/Pods-ProjectStart.release.xcconfig"; sourceTree = "<group>"; };
 		ED297162215061F000B7C4FE /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = System/Library/Frameworks/JavaScriptCore.framework; sourceTree = SDKROOT; };
 		ED2971642150620600B7C4FE /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = Platforms/AppleTVOS.platform/Developer/SDKs/AppleTVOS12.0.sdk/System/Library/Frameworks/JavaScriptCore.framework; sourceTree = DEVELOPER_DIR; };
-		FAC59758241A350800F2B0E4 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../../taolao/untitled folder 8/GoogleService-Info.plist"; sourceTree = "<group>"; };
+		FA553CD7242856B400A833DD /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../../../Downloads/GoogleService-Info.plist"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -127,13 +127,13 @@
 		13B07FAE1A68108700A75B9A /* ProjectStart */ = {
 			isa = PBXGroup;
 			children = (
+				FA553CD7242856B400A833DD /* GoogleService-Info.plist */,
 				008F07F21AC5B25A0029DE68 /* main.jsbundle */,
 				13B07FAF1A68108700A75B9A /* AppDelegate.h */,
 				13B07FB01A68108700A75B9A /* AppDelegate.m */,
 				13B07FB51A68108700A75B9A /* Images.xcassets */,
 				13B07FB61A68108700A75B9A /* Info.plist */,
 				13B07FB11A68108700A75B9A /* LaunchScreen.xib */,
-				FAC59758241A350800F2B0E4 /* GoogleService-Info.plist */,
 				13B07FB71A68108700A75B9A /* main.m */,
 			);
 			name = ProjectStart;
@@ -344,7 +344,7 @@
 			files = (
 				13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */,
 				13B07FBD1A68108700A75B9A /* LaunchScreen.xib in Resources */,
-				FAC59759241A350800F2B0E4 /* GoogleService-Info.plist in Resources */,
+				FA553CD8242856B400A833DD /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

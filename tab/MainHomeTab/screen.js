@@ -16,13 +16,23 @@ import {
   TouchableOpacity,
   Animated,
   TextInput,
+  KeyboardAvoidingView,
+  TouchableWithoutFeedback,
+  Keyboard,
 } from 'react-native';
 
-import {Input, Test} from 'component';
+import {
+  Input,
+  Test,
+  FloatingLabelInputButton,
+  KeyboardAvoiding,
+} from 'component';
 import {config} from 'react-native-firebase';
 
 import Network from 'network';
 import action from 'action';
+
+//import FloatingLabelInputButton from '../../Components/FloatingLabelInputWithButton';
 
 //const netRequest = new Network();
 
@@ -56,31 +66,44 @@ export default class MainHomeTab extends Component {
   render() {
     console.log('render lai MAIN HOME TAB KHONG', this.props);
     return (
-      <View style={{flex: 1, justifyContent: 'center', alignItems: 'center'}}>
-        <Text>TAB 1</Text>
+      <KeyboardAvoiding>
+        <View style={{flex: 1, justifyContent: 'center', alignItems: 'center'}}>
+          <Text>TAB 1</Text>
 
-        <TouchableOpacity
-          onPress={() => {
-            //this.props.navigation.navigate('ModalLoading');
-            this.props.handleIncrease();
-          }}>
-          <Text>CLICK +</Text>
-        </TouchableOpacity>
-        <TouchableOpacity
-          onPress={() => {
-            //this.props.navigation.navigate('ModalLoading');
-            this.props.handleDecrease();
-          }}>
-          <Text>CLICK -</Text>
-        </TouchableOpacity>
-        <TouchableOpacity
-          onPress={() => {
-            this.requestAPI();
-          }}>
-          <Text>REQUEST API</Text>
-        </TouchableOpacity>
-        <Text>{this.props.counter}</Text>
-      </View>
+          <TouchableOpacity
+            onPress={() => {
+              //this.props.navigation.navigate('ModalLoading');
+              this.props.handleIncrease();
+            }}>
+            <Text>CLICK +</Text>
+          </TouchableOpacity>
+          <TouchableOpacity
+            onPress={() => {
+              //this.props.navigation.navigate('ModalLoading');
+              this.props.handleDecrease();
+            }}>
+            <Text>CLICK -</Text>
+          </TouchableOpacity>
+          <TouchableOpacity
+            onPress={() => {
+              this.requestAPI();
+            }}>
+            <Text>REQUEST API</Text>
+          </TouchableOpacity>
+          <Text>{this.props.counter}</Text>
+
+          <FloatingLabelInputButton
+            label="NAME"
+            url="https://raw.githubusercontent.com/AboutReact/sampleresource/master/input_username.png"
+            action={() => console.log('TEST THU')}
+          />
+          <FloatingLabelInputButton
+            label="EMAIL"
+            url="https://raw.githubusercontent.com/AboutReact/sampleresource/master/input_username.png"
+            action={() => console.log('CHAY KHONG')}
+          />
+        </View>
+      </KeyboardAvoiding>
     );
   }
 }
