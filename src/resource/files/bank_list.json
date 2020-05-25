@@ -1,0 +1,142 @@
+[
+  {
+    "name": "Ngân hàng Phát triển TP.HCM",
+    "code": "HDBank"
+  },
+  {
+    "name": "Ngân hàng Á Châu",
+    "code": "ACB"
+  },
+  {
+    "name": "Ngân hàng An Bình",
+    "code": "ABBANK"
+  },
+  {
+    "name": "Ngân hàng Bắc Á",
+    "code": "BacABank"
+  },
+  {
+    "name": "Ngân hàng Bảo Việt",
+    "code": "BaoVietBank"
+  },
+  {
+    "name": "Ngân hàng Đầu tư và Phát triển VN",
+    "code": "BIDV"
+  },
+  {
+    "name": "Ngân hàng Đông Á",
+    "code": "DAB"
+  },
+  {
+    "name": "Ngân hàng Xuất Nhập khẩu",
+    "code": "Eximbank"
+  },
+  {
+    "name": "Ngân hàng Kiên Long",
+    "code": "KienLongBank"
+  },
+  {
+    "name": "Ngân hàng Bưu điện Liên Việt",
+    "code": "LienVietPostBank"
+  },
+  {
+    "name": "Ngân hàng Quân đội",
+    "code": "MB"
+  },
+  {
+    "name": "Ngân hàng Hàng Hải",
+    "code": "MSB"
+  },
+  {
+    "name": "Ngân hàng Nam Á",
+    "code": "Nam A Bank"
+  },
+  {
+    "name": "Ngân hàng Quốc Dân",
+    "code": "NCB"
+  },
+  {
+    "name": "Ngân hàng Phương Đông",
+    "code": "OCB"
+  },
+  {
+    "name": "Ngân hàng Xăng dầu Petrolimex",
+    "code": "PGBank"
+  },
+  {
+    "name": "Ngân hàng Đại chúng",
+    "code": "PVcombank"
+  },
+  {
+    "name": "Ngân hàng Sài Gòn Thương Tín",
+    "code": "Sacombank"
+  },
+  {
+    "name": "Ngân hàng Sài Gòn Công Thương",
+    "code": "Saigonbank"
+  },
+  {
+    "name": "Ngân hàng Sài Gòn",
+    "code": "SCB"
+  },
+  {
+    "name": "Ngân hàng Đông Nam Á",
+    "code": "SeABank"
+  },
+  {
+    "name": "Ngân hàng Sài Gòn - Hà Nội",
+    "code": "SHB"
+  },
+  {
+    "name": "Ngân hàng Kỹ Thương",
+    "code": "Techcombank"
+  },
+  {
+    "name": "Ngân hàng Tiên Phong",
+    "code": "TPBank"
+  },
+  {
+    "name": "Ngân hàng Quốc tế",
+    "code": "VIB"
+  },
+  {
+    "name": "Ngân hàng Việt Á",
+    "code": "VietABank"
+  },
+  {
+    "name": "Ngân hàng Việt Nam Thương Tín",
+    "code": "VietBank"
+  },
+  {
+    "name": "Ngân hàng Bản Việt",
+    "code": "VietCapitalBank"
+  },
+  {
+    "name": "Ngân hàng Ngoại thương",
+    "code": "Vietcombank"
+  },
+  {
+    "name": "Ngân hàng Công Thương",
+    "code": "Vietinbank"
+  },
+  {
+    "name": "Ngân hàng Việt Nam Thịnh Vượng",
+    "code": "VPBank"
+  },
+  {
+    "name": "Ngân hàng Citibank",
+    "code": "Citibank"
+  },
+  {
+    "name": "Ngân hàng HSBC Việt Nam",
+    "code": "HSBC"
+  },
+  {
+    "name": "Ngân hàng Shinhan Việt Nam",
+    "code": "Shinhan Bank"
+  },
+  {
+    "name": "Ngân hàng Standard Chartered",
+    "code": "Standard Chartered"
+  }
+]
