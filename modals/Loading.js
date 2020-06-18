@@ -27,7 +27,7 @@ export default class Loading extends Component {
             alignItems: 'center',
             justifyContent: 'center',
           }}>
-          <Text style={{fontSize: 30}}>This is a modal1234!</Text>
+          <Text style={{fontSize: 30}}>This is a modal1234333333!</Text>
           <Button
             onPress={() => this.props.navigation.goBack()}
             title="Dismiss"

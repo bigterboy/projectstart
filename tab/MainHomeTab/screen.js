@@ -6,7 +6,7 @@
  * @flow
  */
 
-import React, {Component} from 'react';
+import React, { Component } from 'react';
 import {
   Text,
   ScrollView,
@@ -27,7 +27,7 @@ import {
   FloatingLabelInputButton,
   KeyboardAvoiding,
 } from 'component';
-import {config} from 'react-native-firebase';
+import { config } from 'react-native-firebase';
 
 import Network from 'network';
 import action from 'action';
@@ -41,7 +41,7 @@ export default class MainHomeTab extends Component {
     super(props);
   }
 
-  static navigationOptions = ({navigation}) => {
+  static navigationOptions = ({ navigation }) => {
     return {
       headerLeft: () => (
         <Button
@@ -63,12 +63,14 @@ export default class MainHomeTab extends Component {
     console.log('DATA RESPONS LA1111111', await this.props.getAPI());
   };
 
+  getBackData = (data) => console.log(data)
+
   render() {
     console.log('render lai MAIN HOME TAB KHONG', this.props);
     return (
       <KeyboardAvoiding>
-        <View style={{flex: 1, justifyContent: 'center', alignItems: 'center'}}>
-          <Text>TAB 1</Text>
+        <View style={{ flex: 1, justifyContent: 'center', alignItems: 'center' }}>
+          <Text>TAB 12</Text>
 
           <TouchableOpacity
             onPress={() => {
@@ -102,6 +104,11 @@ export default class MainHomeTab extends Component {
             url="https://raw.githubusercontent.com/AboutReact/sampleresource/master/input_username.png"
             action={() => console.log('CHAY KHONG')}
           />
+          <TouchableOpacity onPress={() => {
+            this.props.navigation.navigate('ModalLoading', { goBackData: this.getBackData })
+          }}>
+            <Text>OPEN MODAL</Text>
+          </TouchableOpacity>
         </View>
       </KeyboardAvoiding>
     );
